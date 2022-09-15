@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>English Dictionary</title>
+</head>
+<style>
+    .word{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .input-group-text{
+        color: blue;
+        width: 34;
+    }
+</style>
+<body>
+    <center>
+        <br>
+        <br>
+    <div class="card" style="width: 40rem;">
+        <form action="word">
+            <h2 style="color: blue;">English Dictionary</h2>
+            <div class="input-group mb-2">
+                <span class="input-group-text">Enter Word</span>
+                <input type="text" class="form-control" name="search" >
+              </div>
+              <button type="submit" class="btn btn-warning">Submit</button>
+<br><br>
+            
+        </form>
+    </div>
+<br><br><br>
+    <h3>Meaning:</h3>
+</center>
+<div class="container">
+    <div class="card">
+    <h4 class="word">{% for meaning in meanings %}
+        <li> {{ meaning }}</li>
+       
+        {% endfor %}
+    </h4>
+</div>
+</div>
+</body>
+</html>
